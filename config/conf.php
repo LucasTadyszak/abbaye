@@ -1,9 +1,9 @@
 <?php
 class conf{
 	static private $databases = array(
-		'hostname' => '',
-		'database' => '',
-		'login' => '',
+		'hostname' => 'localhost',
+		'database' => 'abbaye',
+		'login' => 'root',
 		'password' => ''
 	);
 

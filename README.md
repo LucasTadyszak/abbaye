@@ -20,7 +20,7 @@ Eh oui !
 
 ### Modèles
 Créez autant de modèles que de tables dans votre base de données.  
-Vous pouvez garder la structure du fichier modelTypes.php du répertoire model/.
+Vous pouvez garder la structure du fichier modelBeer.php du répertoire model/.
 
 ### Contrôleurs
 Créez autant de contrôleurs que de modèles.  

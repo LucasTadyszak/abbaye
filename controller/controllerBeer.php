@@ -1,12 +1,12 @@
 <?php
-require_once(File::build_path(array("model", "modelTypes.php")));
+require_once(File::build_path(array("model", "modelBeer.php")));
 require_once(File::build_path(array("lib", "session.php")));
 
 class controllerTypes{
   /* Récupérer la liste des types */
   public static function readAll(){
     $pageTitle = "Tous les types";
-    $tab_t = modelTypes::readAll();
+    $tab_t = modelBeer::readAll();
     require (File::build_path(array("view", "navbar.php")));
     require	(File::build_path(array("view", "types", "tousLesTypes.php")));
     require (File::build_path(array("view", "footer.php")));
@@ -16,7 +16,7 @@ class controllerTypes{
     $pageTitle = "...";
     if(isset($_POST['type'])){
       $nomType = htmlspecialchars($_POST['type']);
-      $ajoutType = new modelTypes($nomType);
+      $ajoutType = new modelBeer($nomType);
       $ajoutType->create();
       require (File::build_path(array("view", "navbar.php")));
       /* require	(File::build_path(array("view", "types", "nomDeLaVue.php"))); */
@@ -31,7 +31,7 @@ class controllerTypes{
     $pageTitle = "...";
     if(isset($_POST['type'])){
       $nomType = htmlspecialchars($_POST['type']);
-      $modifieType = new modelTypes($nomType);
+      $modifieType = new modelBeer($nomType);
       $modifieType->update();
       require (File::build_path(array("view", "navbar.php")));
       /* require	(File::build_path(array("view", "types", "nomDeLaVue.php"))); */
@@ -46,7 +46,7 @@ class controllerTypes{
     $pageTitle = "...";
     if(isset($_POST['type'])){
       $nomType = htmlspecialchars($_POST['type']);
-      $supprimeType = new modelTypes($nomType);
+      $supprimeType = new modelBeer($nomType);
       $supprimeType->delete();
       require (File::build_path(array("view", "navbar.php")));
       /* require	(File::build_path(array("view", "types", "nomDeLaVue.php"))); */

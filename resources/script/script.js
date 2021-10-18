@@ -1,3 +1,9 @@
+// //table
+// $(window).on("load resize ", function () {
+//     var scrollWidth = $(".tbl-content").width() - $(".tbl-content table").width();
+//     $(".tbl-header").css({ "padding-right": scrollWidth });
+//   }).resize();
+
 //progress bars overlay
 const radius = 90,
   padding = 50,

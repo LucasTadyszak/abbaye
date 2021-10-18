@@ -1,6 +1,6 @@
 <div class="container px-4 py-20">
   <div class="row">
-    <div class="col-sm-6">
+    <div class="col-sm-4">
       <div class="container-chrono">
         <div class="header">
           <svg id="gradient" style="width: auto">

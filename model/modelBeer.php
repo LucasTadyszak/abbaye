@@ -91,6 +91,13 @@ class modelBeer {
     }
   }
 
+  public function updateTable(){
+    $sql = "UPDATE beer SET calculatedPriceOld = :calculatedPriceOldT, calculatedPrice = :calculatedPriceT;";
+    $req_prep = model::$pdo->prepare($sql);
+    $values = array("calculatedPriceOldT" => 2.5, "calculatedPriceT" => 2.5);
+    $req_prep->execute($values);
+  }
+
   public function delete(){
     $sql = "DELETE FROM beer WHERE id = :idT";
     $req_prep = model::$pdo->prepare($sql);

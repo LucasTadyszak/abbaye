@@ -95,6 +95,9 @@
 
       <div class="start" id="start-timer">Démarrer</div>
       <div class="start hidden" id="reset-timer">Réinitialiser</div>
+      <form action="" method="post">
+        <button class="start mt-5" type="submit" name="reset-table" value="reset">RESET <i class="fas fa-beer btn-beer"></i></button>
+      </form>
     </div>
     <div class="col-sm-9">
       <form action="" method="post">

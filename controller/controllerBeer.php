@@ -12,6 +12,10 @@ class controllerBeer{
       $modifieBeers = new modelBeer();
       $modifieBeers->update($allBeer, $id);
     }
+    if (isset($_POST['reset-table'])) {
+      $modifieBeers = new modelBeer();
+      $modifieBeers->updateTable();
+    }
     $tab_t = modelBeer::readAll();
     require (File::build_path(array("view", "navbar.php")));
     require	(File::build_path(array("view/accueil", "accueil.php")));

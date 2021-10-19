@@ -3,7 +3,7 @@ class conf{
 	static private $databases = array(
 		'hostname' => 'localhost',
 		'database' => 'abbaye',
-		'login' => 'root',
+		'login' => '',
 		'password' => ''
 	);
 

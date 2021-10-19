@@ -1,6 +1,6 @@
 <div class="container px-4 py-20">
   <div class="row">
-    <div class="col-sm-4">
+    <div class="col-sm-3">
       <div class="container-chrono">
         <div class="header">
           <svg id="gradient" style="width: auto">
@@ -96,7 +96,7 @@
       <div class="start" id="start-timer">Démarrer</div>
       <div class="start hidden" id="reset-timer">Réinitialiser</div>
     </div>
-    <div class="col-sm-6 py-3">
+    <div class="col-sm-9">
       <form action="" method="post">
         <table cellpadding="0" cellspacing="0" border="0">
           <thead class="tbl-header">

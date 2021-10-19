@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : mar. 19 oct. 2021 à 18:39
+-- Généré le : mar. 19 oct. 2021 à 18:42
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de données : `abbaye`
 --
+CREATE DATABASE IF NOT EXISTS `abbaye` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `abbaye`;
 
 -- --------------------------------------------------------
 

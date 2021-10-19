@@ -3,8 +3,8 @@ class conf{
 	static private $databases = array(
 		'hostname' => 'localhost',
 		'database' => 'abbaye',
-		'login' => '',
-		'password' => ''
+		'login' => 'root',
+		'password' => 'root'
 	);
 
 	static public function getLogin(){

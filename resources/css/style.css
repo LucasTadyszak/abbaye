@@ -16,8 +16,8 @@ button {
   border: solid 0px transparent;
 }
 
-.py-20 {
-  padding-top: 20rem !important;
+.py-7 {
+  padding-top: 7rem !important;
   padding-bottom: 3rem !important;
 }
 
@@ -93,13 +93,13 @@ svg#gradient text {
 
 .inner-circle {
   position: absolute;
-  top: 335px;
+  top: 175px;
   left: 105px;
 }
 
 .outer-circle {
   position: absolute;
-  top: 340px;
+  top: 175px;
   left: 90px;
   z-index: 1;
 }
@@ -121,7 +121,7 @@ svg#gradient text {
   padding: 5px 20px;
   border-radius: 20px;
   border: solid #636779 1px;
-  top: 510px;
+  top: 355px;
 }
 
 .actions {
@@ -180,7 +180,7 @@ svg#gradient text {
   position: absolute;
   z-index: 2;
   left: 105px;
-  top: 490px;
+  top: 330px;
   margin-top: -170px;
 }
 

@@ -1,4 +1,4 @@
-<div class="container px-4 py-20">
+<div class="container px-4 py-7">
   <div class="row">
     <div class="col-sm-3">
       <div class="container-chrono">

@@ -11,6 +11,11 @@ body {
   letter-spacing: 0.6px;
 }
 
+button {
+  background: transparent;
+  border: solid 0px transparent;
+}
+
 .py-20 {
   padding-top: 20rem !important;
   padding-bottom: 3rem !important;

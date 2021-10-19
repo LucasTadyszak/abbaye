@@ -97,92 +97,38 @@
       <div class="start hidden" id="reset-timer">Réinitialiser</div>
     </div>
     <div class="col-sm-6 py-3">
-      <table cellpadding="0" cellspacing="0" border="0">
-        <thead class="tbl-header">
-          <tr>
-            <th>#</th>
-            <th>Nom</th>
-            <th>Prix</th>
-            <th>Variation</th>
-            <th>Variation %</th>
-            <th>+ <i class="fas fa-beer"></i></th>
-          </tr>
-        </thead>
-        <tbody class="tbl-content">
-          <tr>
-            <td>1</td>
-            <td>AUSTRALIAN COMPANY</td>
-            <td>$1.38</td>
-            <td>+2.01</td>
-            <td>-0.36%</td>
-            <td>
-              <a href="" class="btn">
-                <i class="fas fa-beer btn-beer"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>AUSENCO</td>
-            <td>$2.38</td>
-            <td>-0.01</td>
-            <td>-1.36%</td>
-            <td>
-              <a href="" class="btn">
-                <i class="fas fa-beer btn-beer"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>ADELAIDE</td>
-            <td>$3.22</td>
-            <td>+0.01</td>
-            <td>+1.36%</td>
-            <td>
-              <a href="" class="btn">
-                <i class="fas fa-beer btn-beer"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>ADITYA BIRLA</td>
-            <td>$1.02</td>
-            <td>-1.01</td>
-            <td>+2.36%</td>
-            <td>
-              <a href="" class="btn">
-                <i class="fas fa-beer btn-beer"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>AUSTRALIAN COMPANY</td>
-            <td>$1.38</td>
-            <td>+2.01</td>
-            <td>-0.36%</td>
-            <td>
-              <a href="" class="btn">
-                <i class="fas fa-beer btn-beer"></i>
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>AUSENCO</td>
-            <td>$2.38</td>
-            <td>-0.01</td>
-            <td>-1.36%</td>
-            <td>
-              <a href="" class="btn">
-                <i class="fas fa-beer btn-beer"></i>
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+      <form action="" method="post">
+        <table cellpadding="0" cellspacing="0" border="0">
+          <thead class="tbl-header">
+            <tr>
+              <th>#</th>
+              <th>Nom</th>
+              <th>Prix</th>
+              <th>Variation</th>
+              <th>Variation %</th>
+              <th>+ <i class="fas fa-beer"></i></th>
+            </tr>
+          </thead>
+          <tbody class="tbl-content">
+            <?php $compteur = 1; 
+              for($i = 0; $i < count($tab_t); $i++){ ?>
+              <tr>
+                <td><?= $compteur; ?></td>
+                <td><?= $tab_t[$i]->name; ?></td>
+                <td><?= $tab_t[$i]->calculatedPrice." €"; ?></td>
+                <td><?= $tab_t[$i]->calculatedPrice - $tab_t[$i]->originalPrice; ?></td>
+                <td><?= round((($tab_t[$i]->calculatedPrice - $tab_t[$i]->originalPrice)/$tab_t[$i]->originalPrice)*100, 2); ?></td>
+                <td>
+                  <button type="submit" name="update-beer" value=<?= $tab_t[$i]->id ?>>
+                    <i class="fas fa-beer btn-beer"></i>
+                  </button>
+                </td>
+              </tr>
+            <?php $compteur++; 
+          } ?>
+          </tbody>
+        </table>
+      </form>
     </div>
   </div>
 </div>

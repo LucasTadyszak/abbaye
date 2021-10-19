@@ -2,13 +2,19 @@
 require_once(File::build_path(array("model", "modelBeer.php")));
 require_once(File::build_path(array("lib", "session.php")));
 
-class controllerTypes{
+class controllerBeer{
   /* Récupérer la liste des types */
   public static function readAll(){
-    $pageTitle = "Tous les types";
+    $pageTitle = "Accueil";
+    if (isset($_POST['update-beer'])) {
+      $allBeer = modelBeer::readAll();
+      $id = intval($_POST['update-beer']);
+      $modifieBeers = new modelBeer();
+      $modifieBeers->update($allBeer, $id);
+    }
     $tab_t = modelBeer::readAll();
     require (File::build_path(array("view", "navbar.php")));
-    require	(File::build_path(array("view", "types", "tousLesTypes.php")));
+    require	(File::build_path(array("view/accueil", "accueil.php")));
     require (File::build_path(array("view", "footer.php")));
   }
 
@@ -28,8 +34,8 @@ class controllerTypes{
   }
 
   public static function update(){
-    $pageTitle = "...";
-    if(isset($_POST['type'])){
+    $pageTitle = "Accueil";
+    if(isset($_POST['update-beer'])){
       $nomType = htmlspecialchars($_POST['type']);
       $modifieType = new modelBeer($nomType);
       $modifieType->update();

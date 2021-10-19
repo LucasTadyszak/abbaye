@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le : Dim 17 oct. 2021 à 18:52
+-- Généré le : mar. 19 oct. 2021 à 18:39
 -- Version du serveur :  8.0.21
 -- Version de PHP : 7.3.21
 
@@ -33,6 +33,7 @@ CREATE TABLE IF NOT EXISTS `beer` (
   `name` varchar(50) NOT NULL,
   `originalPrice` float NOT NULL,
   `calculatedPrice` float NOT NULL,
+  `calculatedPriceOld` float NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
@@ -40,13 +41,13 @@ CREATE TABLE IF NOT EXISTS `beer` (
 -- Déchargement des données de la table `beer`
 --
 
-INSERT INTO `beer` (`id`, `name`, `originalPrice`, `calculatedPrice`) VALUES
-(1, 'Filou 8,5%', 2.5, 2.5),
-(2, 'Slash Red 8%', 2.5, 2.5),
-(3, 'Choulette Ambrée 8%', 2.5, 2.5),
-(4, 'La Trappe Triple 8%', 2.5, 2.5),
-(5, 'Kasteel Rouge 8%', 2.5, 2.5),
-(6, 'Fût Bischoff', 2.5, 2.5);
+INSERT INTO `beer` (`id`, `name`, `originalPrice`, `calculatedPrice`, `calculatedPriceOld`) VALUES
+(1, 'Filou 8,5%', 2.5, 2.5, 2.5),
+(2, 'Slash Red 8%', 2.5, 2.5, 2.5),
+(3, 'Choulette Ambrée 8%', 2.5, 2.5, 2.5),
+(4, 'La Trappe Triple 8%', 2.5, 2.5, 2.5),
+(5, 'Kasteel Rouge 8%', 2.5, 2.5, 2.5),
+(6, 'Fût Bischoff', 2.5, 2.5, 2.5);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

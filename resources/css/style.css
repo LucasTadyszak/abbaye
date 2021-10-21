@@ -4,8 +4,7 @@
 
 html,
 body {
-  background: -webkit-linear-gradient(left, #25c481, #25b7c4);
-  background: linear-gradient(to right, #25c481, #25b7c4);
+  background: #0c0456;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
   letter-spacing: 0.6px;
@@ -94,13 +93,13 @@ svg#gradient text {
 .inner-circle {
   position: absolute;
   top: 175px;
-  left: 105px;
+  left: 345px;
 }
 
 .outer-circle {
   position: absolute;
   top: 175px;
-  left: 90px;
+  left: 330px;
   z-index: 1;
 }
 
@@ -115,7 +114,7 @@ svg#gradient text {
 #action-title {
   position: absolute;
   font-size: 8px;
-  left: 180px;
+  left: 420px;
   margin-top: 0;
   background: #1f2025;
   padding: 5px 20px;
@@ -179,7 +178,7 @@ svg#gradient text {
 .spinner-container {
   position: absolute;
   z-index: 2;
-  left: 105px;
+  left: 345px;
   top: 330px;
   margin-top: -170px;
 }
